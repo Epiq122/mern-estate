@@ -1,8 +1,21 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import About from "./pages/About.jsx";
+import Home from "./pages/Home.jsx";
+import SignIn from "./pages/SignIn.jsx";
+import SignUp from "./pages/SignUp.jsx";
+import Profile from "./pages/Profile.jsx";
+
 function App() {
     return (
-        <div>
-            <h1 className="text-9xl">App</h1>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/signin" element={<SignIn/>}/>
+                <Route path="/signup" element={<SignUp/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
